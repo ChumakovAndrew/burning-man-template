@@ -105,7 +105,7 @@ h4 {
 
 .container {
   position: relative;
-  width: 1170px;
+  width: 73.14%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -238,8 +238,7 @@ h4 {
 }
 
 .card {
-  max-width: 564px;
-  min-width: 440px;
+  width: 48.2%;
 }
 .card__title {
   margin-top: 58px;
@@ -264,9 +263,12 @@ h4 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.gallery__img {
-  width: auto;
-  height: 344px;
+.gallery__img_small {
+  width: 23.07%;
+  display: block;
+}
+.gallery__img_big {
+  width: 48.71%;
   display: block;
 }
 
@@ -288,4 +290,79 @@ footer {
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .container {
+    width: 85%;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 899px) {
+  .container {
+    width: 90%;
+  }
+
+  .cards-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .gallery {
+    margin-top: 65px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .gallery__img_small {
+    margin-bottom: 19px;
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    display: block;
+  }
+  .gallery__img_big {
+    margin-bottom: 19px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    display: block;
+  }
+}
+@media (max-width: 899px) and (max-width: 800px) {
+  .header__logo {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 899px) and (max-width: 680px) {
+  .header__phone {
+    display: none;
+  }
+
+  .header__main-menu a {
+    margin: 0 10px;
+  }
 }

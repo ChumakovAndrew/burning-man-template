@@ -101,7 +101,7 @@ h4{
 
 .container {
     position: relative;
-    width: 1170px;
+    width: 73.14%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -236,8 +236,7 @@ h4{
   justify-content: space-between;
 }
 .card {
-  max-width: 564px;
-  min-width: 440px;
+  width: 48.2%;
 
 
 		// .card__title
@@ -267,10 +266,14 @@ h4{
 
 		// .gallary__img
 
-		&__img {
+		&__img_small {
       
-      width: auto;
-      height: 344px;
+      width: 23.07%;
+      display: block;
+		}
+    &__img_big {
+      
+      width: 48.71%;
       display: block;
 		}
 }
@@ -295,3 +298,99 @@ footer{
     line-height: 20px;
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1500px){
+  .container{
+    width: 85%;
+  }
+}
+  
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .container{
+    width: 90%;
+  }
+}
+
+@media (max-width: 899px) {
+  .container{
+    width: 90%;
+  }
+  .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+  }
+  .gallery {
+    margin-top: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+      // .gallary__img
+  
+      &__img_small {
+        margin-bottom: 19px;
+        
+        flex-basis: 48%;
+        display: block;
+      }
+      &__img_big {
+        margin-bottom: 19px;
+        flex-basis: 100%;
+        display: block;
+      }
+  }
+  @media (max-width: 800px) {
+    .header__logo{
+      margin-right: 15px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .header__phone{
+      display: none;
+    }
+    .header__main-menu 
+      a {
+        margin: 0 10px;
+      }
+  }
+}
+
+
+  
+
+
+// @media (max-width: 800px) {
+//   .container{
+//     width: 90vw;
+//   }
+//   .card {
+//     max-width: 390px;
+//     &__title {
+//       margin-top: 35px;
+// 		}
+//   }
+  
+  
+// .gallery {
+//   margin-top: 30px;
+// 		&__img {
+      
+//       width: auto;
+//       height: 235px;
+//       display: block;
+// 		}
+// }
+
+// .about-title {
+//   display: block;
+//   margin-top: 65px;
+// }
+
+// }
